@@ -1,0 +1,40 @@
+.skills-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.skills-list__item {
+  width: 270px;
+
+  & + & {
+    margin-left: 30px;
+  }
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+}
+
+.skills-list__container {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.skills-list__title {
+  @include font(14px, 1.14, 700, 0.03em);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.skills-list__paragraph {
+  color: var(--secondary-text-color);
+  @include font(14px, 1.7, 400, 0.03em);
+}
