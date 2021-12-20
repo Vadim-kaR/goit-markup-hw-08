@@ -4,6 +4,17 @@
 }
 .footer-container {
   display: flex;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+
+.footer-nav {
+  /*   @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
 }
 
 .footer__social-nav {
@@ -12,7 +23,14 @@
   margin-top: 12px;
   margin-bottom: 40px;
 
-  margin-left: 70px;
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .footer__social-title {
@@ -20,7 +38,10 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   color: #ffffff;
-  display: inline-flex;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer-social-list {
@@ -52,6 +73,16 @@
 
 .footer-nav__logo {
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer-adress {
+  @media screen and (max-width: 1199px) {
+    display: block;
+  }
 }
 
 .footer-adress__text {
@@ -59,6 +90,9 @@
   color: var(--white-text-color);
   font-style: normal;
   @include font(14px, 1.7, 400, 0.03em);
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer {
@@ -74,6 +108,11 @@
   font-family: Raleway, sans-serif;
   font-style: normal;
   @include font(26px, 1.2, 700, 0.03em);
+}
+.footer-nav-list {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer-nav-list__item {
@@ -92,7 +131,15 @@
 }
 
 .footer__subscribe-area {
-  margin-left: 93px;
+  @media screen and (max-width: 1199px) {
+    margin-left: initial;
+    display: block;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+
   margin-top: 12px;
 }
 
@@ -104,8 +151,9 @@
   display: inline-flex;
 }
 
-.subscibe-form {
-  display: flex;
+.subscribe-form {
+  @media screen and (max-width: 1199px) {
+  }
 }
 .subscribe-form__input {
   width: 358px;
@@ -123,6 +171,12 @@
   line-height: 1.25;
   outline: none;
   /*   border: transparent; */
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
 }
 
 .subscribe-form__input::placeholder {
@@ -131,4 +185,10 @@
 
 .subscribe-form__icon {
   margin-left: 10px;
+}
+
+.subscribe-form__btn {
+  @media screen and (max-width: 1199px) {
+    display: block;
+  }
 }
