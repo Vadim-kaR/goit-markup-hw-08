@@ -1,29 +1,74 @@
 .clients-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients-container__title {
-  @include font(36px, 1.16, 700, 0.03em);
+  @media screen and (max-width: 1199px) {
+    @include font(28px, 1.16, 700, 0.03em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(36px, 1.18, 700, 0.03em);
+  }
+
   text-align: center;
   margin-bottom: 50px;
 }
 
 .clients-list {
-  display: flex;
-  justify-content: center;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    /*  justify-content: center; */
+    margin: -15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*  margin: -30px; */
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .clients-list__item {
-  width: 170px;
+  @media screen and (max-width: 767px) {
+    /* width: 210px; */
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    /*  width: 226px; */
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: initial;
+    width: 170px;
+    & + & {
+      margin-left: 30px;
+      transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-
-  & + & {
-    margin-left: 30px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
 
   &:hover,
   &:focus {

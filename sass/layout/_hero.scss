@@ -21,7 +21,16 @@
 
 /*оглавление героя*/
 .hero-container__title {
-  @include font(44px, 1.4, 900, 0.06em);
+  @include font(26px, 1.6, 900, 0.06em);
+
+  @media screen and (min-width: 768px) {
+    @include font(26px, 1.6, 900, 0.06em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(44px, 1.4, 900, 0.06em);
+  }
+
   color: var(--white-text-color);
   text-align: center;
   text-transform: uppercase;
