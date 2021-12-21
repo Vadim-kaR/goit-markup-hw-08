@@ -4,29 +4,57 @@
 }
 .footer-container {
   display: flex;
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 767px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 767px) {
     flex-direction: column;
   }
 }
 
 .footer-nav {
-  /*   @media screen and (max-width: 1199px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  } */
+  @media screen and (min-width: 767px) {
+  }
 }
 
+.footer-nav__logo {
+  margin-bottom: 20px;
+  @media screen and (max-width: 767px) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer-nav__link-down {
+  color: var(--white-text-color);
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  @include font(26px, 1.2, 700, 0.03em);
+}
+
+.logo-letters--down {
+  color: var(--accent-color);
+}
+
+.footer-adress {
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-bottom: 60px;
+  }
+}
 .footer__social-nav {
   width: 206px;
   height: 80px;
   margin-top: 12px;
   margin-bottom: 40px;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media screen and (min-width: 767px) {
   }
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
@@ -39,13 +67,17 @@
   text-transform: uppercase;
   color: #ffffff;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
 }
 
 .footer-social-list {
   display: flex;
+  justify-content: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 .footer-social__icon {
   fill: #ffffff;
@@ -71,20 +103,6 @@
   }
 }
 
-.footer-nav__logo {
-  margin-bottom: 20px;
-  @media screen and (max-width: 1199px) {
-    display: block;
-    text-align: center;
-  }
-}
-
-.footer-adress {
-  @media screen and (max-width: 1199px) {
-    display: block;
-  }
-}
-
 .footer-adress__text {
   margin-bottom: 9px;
   color: var(--white-text-color);
@@ -99,16 +117,6 @@
   background-color: var(--footer-bg-color);
 }
 
-.logo-letters--down {
-  color: var(--accent-color);
-}
-
-.footer-nav__link-down {
-  color: var(--white-text-color);
-  font-family: Raleway, sans-serif;
-  font-style: normal;
-  @include font(26px, 1.2, 700, 0.03em);
-}
 .footer-nav-list {
   @media screen and (max-width: 1199px) {
     text-align: center;
@@ -131,7 +139,7 @@
 }
 
 .footer__subscribe-area {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     margin-left: initial;
     display: block;
     text-align: center;
@@ -143,23 +151,25 @@
   margin-top: 12px;
 }
 
-.footer__subscribe-area-title {
+.footer-subscribe-area__title {
   margin-bottom: 20px;
   @include font(14px, 1.14, 700, 0.03em);
   text-transform: uppercase;
   color: #ffffff;
-  display: inline-flex;
+  display: block;
+  text-align: center;
 }
 
 .subscribe-form {
-  @media screen and (max-width: 1199px) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 450px;
+  @media screen and (max-width: 767px) {
   }
 }
+
+.footer-subscribe-area {
+  max-width: 100%;
+}
 .subscribe-form__input {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     width: 100%;
   }
 
@@ -180,7 +190,7 @@
   line-height: 1.25;
   outline: none;
   /*   border: transparent; */
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -192,12 +202,27 @@
   @include font(16px, 1.25, 400, 0.03em);
 }
 
-.subscribe-form__icon {
+.footer-subscribe-area__icon {
   margin-left: 10px;
 }
 
-.subscribe-form__btn {
-  @media screen and (max-width: 1199px) {
-    display: block;
-  }
+.footer-subscribe-area__btn {
+  /* margin-left: 12px; */
+  margin: 0, auto;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  @include font(16px, 1.9, 700, 0.03em);
+  border: transparent;
 }
