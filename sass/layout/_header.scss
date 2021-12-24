@@ -1,25 +1,55 @@
 .header {
   background-color: var(--header-bg-color);
+  @media screen and (max-width: 767px) {
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 
-.header-list {
-  display: flex;
+.header__logo {
+  display: inline-block;
+  padding-top: auto;
+
+  /* padding-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px; */
 }
-/*характеристики шрифта логотипа*/
+
 .header__logo-link-up {
+  @media screen and (max-width: 767px) {
+    @include font(24px, 1.2, 700, 0.03em);
+  }
   @include font(26px, 1.2, 700, 0.03em);
   color: var(--primary-text-color);
   font-family: Raleway, sans-serif;
   font-style: normal;
 }
-/*назначение цвета первых букв логотипа сверху*/
+
 .logo-letters-up {
   color: var(--accent-color);
+}
+
+.header__nav-list {
+  color: var(--primary-text-color);
+  @include font(14px, 1.16, 700, 0.02em);
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (width: 768px) {
+    width: 100%;
+  }
+}
+
+.header-list {
+  display: flex;
 }
 
 .header-list__link {
@@ -52,24 +82,16 @@
   & .item + .item {
     margin-left: 50px;
   }
+
+  & .link {
+    color: var(--secondary-text-color);
+    @include font(14px, 1.14, 500, 0.02em);
+  }
 }
 
 /*панель ссылок хедера*/
-.header-contacts .link {
-  color: var(--secondary-text-color);
-  @include font(14px, 1.14, 500, 0.02em);
-}
-/*панель навигации*/
-.header__nav-list .link {
-  color: var(--primary-text-color);
-  @include font(14px, 1.14, 500, 0.02em);
-}
 
-.header__logo {
-  padding-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
+/*панель навигации*/
 
 .header-list__item {
   margin-right: 50px;
@@ -113,4 +135,29 @@
 
 .header--portfolio {
   border-bottom: 1px solid #ececec;
+}
+
+.menu-button {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button .is-open .icon-cross {
+  display: block;
+}
+
+.menu-button .is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
