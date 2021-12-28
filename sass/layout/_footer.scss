@@ -156,8 +156,7 @@
   list-style: none;
   @include font(14px, 1.7, 400, 0.03em);
   font-style: normal;
-  /*color: rgba(255, 255, 255, 0.6);*/
-  color: var(--white-text-color);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer__subscribe-area {

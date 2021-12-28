@@ -65,6 +65,9 @@
   @include font(14px, 1.14, 700, 0.03em);
   text-transform: uppercase;
   margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .skills-list__paragraph {
